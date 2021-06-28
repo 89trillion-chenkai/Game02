@@ -18,31 +18,20 @@ public class CoinControl : MonoBehaviour
 
     IEnumerator Delayed() //间隔产生协程
     {
-        if (BuyUIButtonFunction.BuyNumber < 3) //飞出次数乘五枚金币
+        int coinNum = BuyUIButtonFunction.BuyNumber * 5; //计算飞出金币数
+
+        for (int i = 0; i < coinNum && i < 15; ++i) //限制金币数最大15枚
         {
-            for (int i = 0; i < BuyUIButtonFunction.BuyNumber * 5; ++i)
-            {
-                Image coin = Instantiate(_coinPrefab, transform, false);
-                yield return new WaitForSeconds(0.1f);
-                coin.transform.DOMove(_target.transform.position, 0.3f); //移动到指定位置
-                Destroy(coin.gameObject, 0.5f);
-            }
-        }
-        else //飞出十五枚金币
-        {
-            for (int i = 0; i < 15; ++i)
-            {
-                Image coin = Instantiate(_coinPrefab, transform, false);
-                yield return new WaitForSeconds(0.1f);
-                coin.transform.DOMove(_target.transform.position, 0.3f); //移动到指定位置
-                Destroy(coin.gameObject, 0.5f);
-            }
+            Image coin = Instantiate(_coinPrefab, transform, false); //实例化生成
+            yield return new WaitForSeconds(0.1f);
+            coin.transform.DOMove(_target.transform.position, 0.3f); //移动到指定位置
+            Destroy(coin.gameObject, 0.5f);
         }
     }
     
     public void CoinAnimation()
     {
         _target = GameObject.Find("UIRoot/ImageBackground/ImageTopMoneyUI/ImageCoins/ImageMask"); //获取指定目标位置
-        StartCoroutine(nameof(Delayed));
+        StartCoroutine(nameof(Delayed)); //开启协程
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 662781356607865975}
   - component: {fileID: 1436327268352087110}
   m_Layer: 5
-  m_Name: ImageCoin1
+  m_Name: ImageCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 6092546623624874104}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7928084a13f4b4247a3839595279c04e, type: 2}
+  m_Controller: {fileID: 9100000, guid: d910a3d325fc04530a15216d4f01b266, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
