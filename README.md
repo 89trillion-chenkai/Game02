@@ -6,23 +6,19 @@
 
 
 ## 2.目录结构 
-｜——DOTween                      #DoTween插件
-｜
-｜——Function1   
-｜ ｜——Scripts   
-｜ 	 ｜——EnterUIControl 		#初始界面按钮  
+｜——DOTween                       #DoTween插件  
 ｜  
-｜——Function2  
-｜ ｜——Scripts  
-｜ 	 ｜——BuyUIButtonFunction    #购买窗口相关 
-｜  
-｜——Function3  
-｜ ｜——Scripts  
-｜    ｜—— CoinControl           #显示金币飞舞特效  
-｜ 	  ｜——DataManager 	        #更新金币、钻石数据  
-｜  
-｜——Resources   
-｜ ｜——Prefabs 				    #预制体模型  
+｜——Scripts   
+｜  |——DataManagers  
+｜  |  |——DataManager 	          #更新金币、钻石数据     
+｜  |  
+｜  |——UIControl    
+｜ 	   |——BuyUIButtonFunction     #购买窗口相关   
+｜     ｜——CoinControl             #显示金币飞舞特效控制  
+｜     ｜——EnterUIControl 		  #初始界面按钮  
+｜     
+｜——Resources    
+｜  ｜——Prefabs 				      #预制体模型    
 ｜
 
 ## 3.代码逻辑分层
