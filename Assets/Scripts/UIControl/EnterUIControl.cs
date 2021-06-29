@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Function1.Scripts
+namespace UIControl
 {
     /// <summary>
     /// 控制主界面显示
@@ -15,6 +15,7 @@ namespace Function1.Scripts
             image.gameObject.SetActive(false);
         }
 
+        //展示初始UI
         public void ShowUI()
         {
             image.gameObject.SetActive(true);
