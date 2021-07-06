@@ -6,20 +6,23 @@
 
 
 ## 2.目录结构 
-｜——DOTween                       #DoTween插件  
+````
+｜——DOTween                          #DoTween插件  
 ｜  
 ｜——Scripts   
-｜   |——DataManagers  
-｜   |   |——DataManager 	          #更新金币、钻石数据     
-｜   |  
-｜   |——UIControl    
-｜ 	     |——BuyUIButtonFunction     #购买窗口相关   
-｜       ｜——CoinControl             #显示金币飞舞特效控制  
-｜       ｜——EnterUIControl 		  #初始界面按钮  
+｜   |__DataManagers  
+｜   |  |__CoinDataUpdate            #更新金币、钻石数据     
+｜   |  |__PlayerInfo                #玩家金币、钻石信息  
+｜   |     
+｜   |__UIControl    
+｜      ｜__BuyUIButtonFunction      #购买窗口相关   
+｜      ｜__CoinControl              #显示金币飞舞特效控制  
+｜      ｜__EnterUIControl           #初始界面按钮  
 ｜     
 ｜——Resources    
-｜   ｜——Prefabs 				      #预制体模型    
+｜  ｜__Prefabs                      #预制体模型    
 ｜
+````
 
 ## 3.代码逻辑分层
 
