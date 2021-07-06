@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2835582885193407586}
   - component: {fileID: 8612751878455106547}
   - component: {fileID: 780443456422493764}
-  - component: {fileID: 662781356607865975}
   - component: {fileID: 1436327268352087110}
   m_Layer: 5
   m_Name: ImageCoin
@@ -76,18 +75,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &662781356607865975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6092546623624874104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f1a2f33ce514758a99b65423cd0cdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1436327268352087110
 Animator:
   serializedVersion: 3
