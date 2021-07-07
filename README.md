@@ -16,7 +16,7 @@
 ｜   |     
 ｜   |__UIControl    
 ｜      ｜__BuyUIButtonFunction      #购买窗口相关   
-｜      ｜__CoinControl              #显示金币飞舞特效控制  
+｜      ｜__CoinEffectControl        #显示金币飞舞特效控制  
 ｜      ｜__EnterUIControl           #初始界面按钮  
 ｜     
 ｜——Resources    

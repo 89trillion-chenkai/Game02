@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>
@@ -7,16 +8,11 @@ using UnityEngine.UI;
 /// </summary>
 public class CoinDataUpdate : MonoBehaviour
 {
-    [SerializeField]
-    private Text imagePrice; //购买所需金币图片，需拖拽
-    [SerializeField]
-    private Text imageCoinNumber; //购买所需钻石图片，需拖拽
-    [SerializeField]
-    private Image imageBackground; //背景图片，需拖拽
-    [SerializeField]
-    private Animator boxImageAnimator; //宝箱的动画控制器，需拖拽
-    [SerializeField]
-    private ParticleSystem lightEffect; //开箱炫光特效，需拖拽
+    [SerializeField] private Text imagePrice; //购买所需金币图片，需拖拽
+    [SerializeField] private Text imageCoinNumber; //购买所需钻石图片，需拖拽
+    [FormerlySerializedAs("coinControl")] [SerializeField] private CoinEffectControl coinEffectControl; //产生金币飞舞效果脚本，需拖拽
+    [SerializeField] private Animator boxImageAnimator; //宝箱的动画控制器，需拖拽
+    [SerializeField] private ParticleSystem lightEffect; //开箱炫光特效，需拖拽
     private int buyPriceNumber; //记录购买所需钻石数
     private int buyCoinNumber; //记录购买所需的金币数
 
@@ -38,7 +34,7 @@ public class CoinDataUpdate : MonoBehaviour
             PlayerInfo.diamondsNumber = priceDifference; //更新购买后钻石总数
             boxImageAnimator.SetBool("boxOpenBool", true); //开启开箱动画
             lightEffect.Play(); //开启开箱炫光特效
-            imageBackground.GetComponent<CoinControl>().CoinAnimation(); //产生金币飞舞效果
+            coinEffectControl.CoinAnimation(); //产生金币飞舞效果
         }
     }
 }

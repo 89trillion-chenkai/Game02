@@ -7,30 +7,25 @@ using UnityEngine.UI;
 /// <summary>
 /// 金币产生及动画
 /// </summary>
-public class CoinControl : MonoBehaviour
+public class CoinEffectControl : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject coinPrefab; //金币预制体，需拖拽
-    [SerializeField]
-    private Transform target; //目标物体位置，需拖拽
-    [SerializeField]
-    private PlayerInfo playerInfo; //调用更新玩家金币钻石信息的脚本，需拖拽
-    [SerializeField]
-    private Animator boxImageAnimator; //宝箱的动画控制器，需拖拽
-    [SerializeField]
-    private ParticleSystem lightEffect; //开箱炫光特效，需拖拽
+    [SerializeField] private Transform coinPrefab; //金币预制体，需拖拽
+    [SerializeField] private Transform target; //目标物体位置，需拖拽
+    [SerializeField] private PlayerInfo playerInfo; //调用更新玩家金币钻石信息的脚本，需拖拽
+    [SerializeField] private Animator boxImageAnimator; //宝箱的动画控制器，需拖拽
+    [SerializeField] private ParticleSystem lightEffect; //开箱炫光特效，需拖拽
 
     //间隔产生金币的协程
-    IEnumerator Delayed()
+    IEnumerator DelayedGenerate()
     {
         int coinNum = Mathf.Clamp(PlayerInfo.buyNumber * 5, 5, 15); //计算特效飞出金币数并限制金币数最大15枚
 
         for (int i = 0; i < coinNum; ++i) 
         {
-            GameObject coin = Instantiate(coinPrefab, transform, false); //实例化生成
+            Transform coin = Instantiate(coinPrefab, transform, false); //实例化生成
             yield return new WaitForSeconds(0.1f);
-            coin.transform.DOMove(target.position, 0.3f); //移动到指定位置
-            Destroy(coin.gameObject, 0.5f);
+            coin.DOMove(target.position, 0.3f); //移动到指定位置
+            Destroy(coin.gameObject, 0.5f); //延迟销毁
         }
         
         yield return new WaitForSeconds(0.3f);
@@ -43,6 +38,6 @@ public class CoinControl : MonoBehaviour
     //展示金币动画
     public void CoinAnimation()
     {
-        StartCoroutine(nameof(Delayed)); //开启协程
+        StartCoroutine(nameof(DelayedGenerate)); //开启协程
     }
 }
