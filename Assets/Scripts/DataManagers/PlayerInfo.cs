@@ -19,10 +19,10 @@ public class PlayerInfo : MonoBehaviour
         coinNumber = 0;
         diamondsNumber = 1847;
         buyNumber = 0;
-        SetCoinAndDiamondsInfo(); //显示玩家的金币和钻石信息
+        SetCoinAndDiamondsInfo(); //更新玩家的金币和钻石信息显示
     }
 
-    //显示玩家的金币和钻石信息
+    //更新玩家的金币和钻石信息显示
     public void SetCoinAndDiamondsInfo()
     {
         imageDiamonds.text = diamondsNumber.ToString(); //设置玩家钻石数量

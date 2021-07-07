@@ -10,7 +10,7 @@ public class CoinDataUpdate : MonoBehaviour
 {
     [SerializeField] private Text imagePrice; //购买所需金币图片，需拖拽
     [SerializeField] private Text imageCoinNumber; //购买所需钻石图片，需拖拽
-    [FormerlySerializedAs("coinControl")] [SerializeField] private CoinEffectControl coinEffectControl; //产生金币飞舞效果脚本，需拖拽
+    [SerializeField] private CoinEffectControl coinEffectControl; //产生金币飞舞效果脚本，需拖拽
     [SerializeField] private Animator boxImageAnimator; //宝箱的动画控制器，需拖拽
     [SerializeField] private ParticleSystem lightEffect; //开箱炫光特效，需拖拽
     private int buyPriceNumber; //记录购买所需钻石数

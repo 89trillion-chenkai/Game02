@@ -38,6 +38,6 @@ public class CoinEffectControl : MonoBehaviour
     //展示金币动画
     public void CoinAnimation()
     {
-        StartCoroutine(nameof(DelayedGenerate)); //开启协程
+        StartCoroutine("DelayedGenerate"); //开启协程
     }
 }
