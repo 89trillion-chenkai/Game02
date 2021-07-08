@@ -11,7 +11,7 @@
 ｜  
 ｜——Scripts   
 ｜   |__DataManagers  
-｜   |  |__CoinDataUpdate            #更新金币、钻石数据     
+｜   |  |__BuyManager            #更新金币、钻石数据     
 ｜   |  |__PlayerInfo                #玩家金币、钻石信息  
 ｜   |     
 ｜   |__UIControl    
