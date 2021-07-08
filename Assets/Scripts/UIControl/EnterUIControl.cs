@@ -6,16 +6,16 @@ using UnityEngine.UI;
 /// </summary>
 public class EnterUIControl : MonoBehaviour
 {
-    [SerializeField] private GameObject image; //主界面图片
+    [SerializeField] private GameObject imgMainInterface; //主界面图片
 
     void Start()
     {
-        image.SetActive(false);
+        imgMainInterface.SetActive(false);
     }
 
     //展示初始UI
     public void ShowUI()
     {
-        image.SetActive(true);
+        imgMainInterface.SetActive(true);
     }
 }

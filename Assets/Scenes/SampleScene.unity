@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 57077068}
   - component: {fileID: 57077067}
   m_Layer: 5
-  m_Name: BuyButton
+  m_Name: ButtonBuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,10 +584,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 2835582885193407586, guid: 9da16d95461cb4351a20b870c8f0bf1f,
     type: 3}
-  target: {fileID: 1964883124}
-  playerInfo: {fileID: 549213727}
+  targetTransform: {fileID: 1964883124}
   boxImageAnimator: {fileID: 640795431}
   lightEffect: {fileID: 15221976}
+  playerInfo: {fileID: 549213727}
+  buyManager: {fileID: 905095200}
 --- !u!1 &549213724
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a049270c38fa24e0a9cb68d50eac87b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 513284810}
+  imgMainInterface: {fileID: 513284810}
 --- !u!4 &549213726
 Transform:
   m_ObjectHideFlags: 0
@@ -645,8 +646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a62aa3f2378142f4bc8e6d677a8aa63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageCoins: {fileID: 949504122}
-  imageDiamonds: {fileID: 1889656129}
+  txtPlayerCoins: {fileID: 949504122}
+  txtPlayerDiamonds: {fileID: 1889656129}
 --- !u!1 &580107365
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +882,7 @@ GameObject:
   - component: {fileID: 640795429}
   - component: {fileID: 640795431}
   m_Layer: 5
-  m_Name: BoxImage
+  m_Name: ImageBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,9 +1336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc6b91b10ed84d20b620c3e291526cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyImage: {fileID: 2040957723}
-  showPosition: {fileID: 1413039888}
-  coinDataUpdate: {fileID: 905095200}
+  imgBuyRectTransform: {fileID: 2040957723}
+  imgParentTransform: {fileID: 1413039888}
+  buyManager: {fileID: 905095200}
 --- !u!114 &905095200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,11 +1351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbd8e65112264efe92fcfda0f29aa59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagePrice: {fileID: 1063574018}
-  imageCoinNumber: {fileID: 912263688}
+  txtPrice: {fileID: 1063574018}
+  txtCoinNumber: {fileID: 912263688}
   coinEffectControl: {fileID: 513284814}
-  boxImageAnimator: {fileID: 640795431}
-  lightEffect: {fileID: 15221976}
 --- !u!1 &912263686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1533,7 @@ GameObject:
   - component: {fileID: 931882956}
   - component: {fileID: 931882955}
   m_Layer: 5
-  m_Name: TextMask
+  m_Name: TextCoinUnitMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,7 +1772,7 @@ GameObject:
   - component: {fileID: 1063574019}
   - component: {fileID: 1063574018}
   m_Layer: 5
-  m_Name: PriceText
+  m_Name: TextPrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1929,7 +1928,7 @@ GameObject:
   - component: {fileID: 1152001002}
   - component: {fileID: 1152001001}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2359,7 +2358,7 @@ GameObject:
   - component: {fileID: 1649390597}
   - component: {fileID: 1649390596}
   m_Layer: 5
-  m_Name: ImageMask
+  m_Name: ImageDiamondMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2797,7 +2796,7 @@ GameObject:
   - component: {fileID: 1964883126}
   - component: {fileID: 1964883125}
   m_Layer: 5
-  m_Name: ImageMask
+  m_Name: ImageCoinMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
